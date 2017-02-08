@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_tv"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="test.qxc.com.myapp.view.activity.TVActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#303030"
+        android:orientation="vertical">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tv_tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabGravity="center"
+            app:tabIndicatorColor="#fff"
+            app:tabSelectedTextColor="#33B5E5"
+            app:tabTextColor="#fff"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#33B5E5" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/tv_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <test.qxc.com.myapp.custom.MyCustomLayout
+        android:id="@+id/tv_mycustomlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.pili.pldroid.player.widget.PLVideoView
+            android:id="@+id/tv_PLVideoView"
+            android:layout_width="match_parent"
+            android:layout_height="215dp"
+            android:layout_gravity="center"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/tv_change"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Change"
+                android:background="#444"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"/>
+        </LinearLayout>
+    </test.qxc.com.myapp.custom.MyCustomLayout>
+
+</FrameLayout>
